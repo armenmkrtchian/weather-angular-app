@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Weather } from '../interfaces/weather';
 import { MatCardModule } from '@angular/material/card';
 import { DecimalPipe, Location, NgIf } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { Weather } from '../interfaces/weather';
 
 @Component({
   selector: 'app-weather-dashboard',

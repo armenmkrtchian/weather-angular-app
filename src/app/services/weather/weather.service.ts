@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Weather } from '../../interfaces/weather';
-import { Observable, catchError, of, tap } from 'rxjs';
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { CacheService } from '../cache/cache.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable, catchError, of, tap } from 'rxjs';
+import { Weather } from '../../interfaces/weather';
+import { CacheService } from '../cache/cache.service';
 import { environment } from '../../../environments/environment.prod';
 
 @Injectable({
@@ -15,7 +15,6 @@ export class WeatherService {
     private cacheService: CacheService,
     private snackBar: MatSnackBar
   ) {}
-
 
   getWeather(city: string): Observable<Weather | null> {
     const cacheKey = 'apiData';

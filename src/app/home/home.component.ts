@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
+import { Router } from '@angular/router';
 import { Weather } from '../interfaces/weather';
 import { WeatherService } from '../services/weather/weather.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
