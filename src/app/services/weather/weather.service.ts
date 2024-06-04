@@ -37,7 +37,7 @@ export class WeatherService {
           tap((data) => this.cacheService.setCache(cacheKey, data)),
           catchError((error) => {
             console.error('Failed to fetch data', error);
-            this.openSnackBar(error.error.message.toUpperCase());
+            this.openSnackBar(`${error.error.message.toUpperCase()} 🚫, TRY AGAIN!`);
             return of(null);
           })
         );
