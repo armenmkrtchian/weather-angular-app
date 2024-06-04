@@ -8,24 +8,26 @@
     <div class="sidenav-content">
       <div class="drawerButton">
         <button
+          mat-fab
           (click)="drawer.toggle()"
-          mat-flat-button
           routerLinkActive="mat-accent"
           color="primary"
           routerLink="home"
+          matTooltip="Navigate for the new search!🕵"
         >
-          Home
+          <mat-icon>home</mat-icon>
         </button>
       </div>
       <div class="drawerButton">
         <button
+          mat-fab
           (click)="drawer.toggle()"
-          mat-flat-button
           routerLinkActive="mat-accent"
           color="primary"
           routerLink="weather-dashboard"
+          matTooltip="Navigate to the Weather Dashboard 🌤 🌦 🌈 🌩"
         >
-          weather dashboard
+          <mat-icon>space_dashboard</mat-icon>
         </button>
       </div>
     </div>

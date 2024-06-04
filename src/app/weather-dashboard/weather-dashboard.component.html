@@ -1,9 +1,19 @@
 @if (weather!.id) {
 <mat-card>
-  <mat-card-header>
-    <mat-card-title
-      >{{ weather!.name }}, {{ weather!.sys!.country }}</mat-card-title
+  <mat-card-actions>
+    <button
+      mat-icon-button
+      aria-label="back icon"
+      (click)="goToHome()"
+      matTooltip="Navigate back!"
     >
+      <mat-icon class="back-icon">arrow_back</mat-icon>
+    </button>
+  </mat-card-actions>
+  <mat-card-header>
+    <mat-card-title>
+      {{ weather!.name }}, {{ weather!.sys!.country }}
+    </mat-card-title>
     <mat-card-subtitle>{{ weather!.weather[0].main }} </mat-card-subtitle>
   </mat-card-header>
   <img
@@ -17,9 +27,9 @@
   />
   <mat-card-content>
     <h1>{{ weather!.main.temp | number : "1.0-0" }} &#8451;</h1>
-    <p>Pressure: {{ weather!.main.pressure }} hPa</p>
-    <p>Humidity: {{ weather!.main.humidity }} %</p>
-    <p>Wind: {{ weather!.wind.speed }} m/s</p>
+    <p>Pressure: <strong>{{ weather!.main.pressure }} hPa</strong></p>
+    <p>Humidity: <strong>{{ weather!.main.humidity }} %</strong></p>
+    <p>Wind: <strong>{{ weather!.wind.speed }} m/s</strong></p>
   </mat-card-content>
 </mat-card>
 } @else {

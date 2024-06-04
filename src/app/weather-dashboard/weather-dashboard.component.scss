@@ -1,9 +1,16 @@
+@import "../../scss/colors";
+
 :host {
   display: flex;
   justify-content: space-around;
+  color: $main-color;
 
   .no-searched-city-avatar {
     background-image: url("../../assets/images/search.png");
     background-size: cover;
+  }
+
+  .back-icon {
+    color: $main-color;
   }
 }

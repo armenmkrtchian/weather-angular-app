@@ -6,6 +6,7 @@ import { MatDrawerMode, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { BooleanInput } from '@angular/cdk/coercion';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { BooleanInput } from '@angular/cdk/coercion';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
+    MatTooltipModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
