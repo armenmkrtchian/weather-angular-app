@@ -1,0 +1,36 @@
+<mat-toolbar class="toolbar">
+  <button (click)="drawer.toggle()" mat-icon-button class="burger">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-drawer-container class="container" [hasBackdrop]="mdcBackdrop">
+  <mat-drawer #drawer class="drawer" [mode]="drawerMode">
+    <div class="sidenav-content">
+      <div class="drawerButton">
+        <button
+          (click)="drawer.toggle()"
+          mat-flat-button
+          routerLinkActive="mat-accent"
+          color="primary"
+          routerLink="home"
+        >
+          Home
+        </button>
+      </div>
+      <div class="drawerButton">
+        <button
+          (click)="drawer.toggle()"
+          mat-flat-button
+          routerLinkActive="mat-accent"
+          color="primary"
+          routerLink="weather-dashboard"
+        >
+          weather dashboard
+        </button>
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content class="content-wrapper">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

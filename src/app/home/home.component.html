@@ -1,0 +1,9 @@
+<mat-form-field>
+  <input
+    matInput
+    placeholder="Enter city"
+    #cityCtrl
+    (keydown.enter)="search(cityCtrl.value)"
+  />
+  <mat-icon matSuffix (click)="search(cityCtrl.value)">search</mat-icon>
+</mat-form-field>

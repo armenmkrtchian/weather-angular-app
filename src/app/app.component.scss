@@ -1,0 +1,48 @@
+@import "../scss/colors";
+
+.toolbar {
+  height: 20%;
+  background-color: #bf55ec;
+}
+
+.biggerbutton {
+  width: 150px !important;
+  height: 100px !important;
+  font-size: 30px !important;
+}
+
+.toolBarButton,
+.drawerButton {
+  padding: 20px;
+}
+
+.container {
+  height: 80%;
+}
+
+.drawer {
+  background-color: $my-color;
+  width: 200px;
+}
+
+.burger {
+  color: white;
+}
+
+@media all and (max-width: 500px) {
+  .toolBarButton {
+    display: none;
+  }
+
+  .toolbar {
+    height: 5%;
+  }
+
+  .container {
+    height: 95%;
+  }
+}
+
+.content-wrapper {
+  padding: 30px;
+}

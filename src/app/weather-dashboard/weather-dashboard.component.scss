@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  justify-content: space-around;
+
+  .no-searched-city-avatar {
+    background-image: url("../../assets/images/search.png");
+    background-size: cover;
+  }
+}

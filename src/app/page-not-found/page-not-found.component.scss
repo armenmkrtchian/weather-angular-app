@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+  justify-content: space-around;
+  .actions-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+}
