@@ -1,8 +1,6 @@
 # Weather Dashboard Application with Angular
 
-## Demo: https://stackblitz.com/~/github.com/armenmkrtchian/weather-angular-app
-
-This project is a weather dashboard application built using Angular, RxJS, and Angular Material for a responsive and visually appealing design.
+This project is a weather dashboard application built using Angular, RxJS, and Angular Material for a responsive and visually appealing design. Demo: https://stackblitz.com/~/github.com/armenmkrtchian/weather-angular-app
 
 ## Getting Started
 ### 1. Prerequisites:
