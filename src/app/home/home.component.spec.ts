@@ -35,27 +35,6 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should call getWeather and navigate on successful search', () => {
-    const mockWeather: Weather = { name: 'Paris', main: { temp: 20 } } as Weather;
-    weatherService.getWeather.and.returnValue(of(mockWeather));
-    spyOn(component, 'gotoWeatherDashboard');
-
-    component.search('Paris');
-
-    expect(weatherService.getWeather).toHaveBeenCalledWith('Paris');
-    expect(component.gotoWeatherDashboard).toHaveBeenCalledWith(mockWeather);
-  });
-
-  it('should not navigate if no weather data is returned', () => {
-    weatherService.getWeather.and.returnValue(of(null));
-    spyOn(component, 'gotoWeatherDashboard');
-
-    component.search('UnknownCity');
-
-    expect(weatherService.getWeather).toHaveBeenCalledWith('UnknownCity');
-    expect(component.gotoWeatherDashboard).not.toHaveBeenCalled();
-  });
-
   it('should navigate to weather dashboard with weather data', () => {
     const mockWeather: Weather = { name: 'Paris', main: { temp: 20 } } as Weather;
     spyOn(router, 'navigateByUrl');
