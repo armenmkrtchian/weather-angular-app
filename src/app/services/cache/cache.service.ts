@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Weather } from '../../interfaces/weather';
+const MILLISECONDS_IN_HOUR = 3600000;
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +8,7 @@ import { Weather } from '../../interfaces/weather';
 export class CacheService {
   private cache: Map<string, { data: Weather; expiry: number }> = new Map();
 
-  setCache(key: string, data: Weather, expiryTime: number = 3600000): void {
+  setCache(key: string, data: Weather, expiryTime: number = MILLISECONDS_IN_HOUR): void {
     const expiry = Date.now() + expiryTime;
     this.cache.set(key, { data, expiry });
   }

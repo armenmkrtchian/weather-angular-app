@@ -5,6 +5,7 @@ import { Observable, catchError, of, tap } from 'rxjs';
 import { Weather } from '../../interfaces/weather';
 import { CacheService } from '../cache/cache.service';
 import { environment } from '../../../environments/environment.prod';
+const SNACKBAR_DURATION = 2500;
 
 @Injectable({
   providedIn: 'root',
@@ -36,7 +37,9 @@ export class WeatherService {
           tap((data) => this.cacheService.setCache(cacheKey, data)),
           catchError((error) => {
             console.error('Failed to fetch data', error);
-            this.openSnackBar(`${error.error.message.toUpperCase()} 🚫, TRY AGAIN!`);
+            this.openSnackBar(
+              `${error.error.message.toUpperCase()} 🚫, TRY AGAIN!`
+            );
             return of(null);
           })
         );
@@ -44,7 +47,9 @@ export class WeatherService {
   }
 
   openSnackBar(message: string): void {
-    this.snackBar.open(message);
+    this.snackBar.open(message, 'close', {
+      duration: SNACKBAR_DURATION,
+    });
   }
 
   clearCache(): void {
