@@ -14,12 +14,11 @@ import { Router } from '@angular/router';
 })
 export class WeatherDashboardComponent {
   weather: Weather | undefined;
-
+  
   constructor(private location: Location, private router: Router) {}
 
   ngOnInit(): void {
     this.weather = this.location.getState() as Weather;
-    console.log(this.weather);
   }
 
   goToHome(): void {
